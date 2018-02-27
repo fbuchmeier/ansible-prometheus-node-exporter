@@ -2,11 +2,14 @@
 
 - name: reenable node exporter service
   command: systemctl reenable prometheus-node-exporter.service
+  when: service_mgr
 
 - name: reinit node exporter
   command: initctl reload-configuration
+  when: service_mgr
 
 - name: restart node exporter
   service:
     name: prometheus-node-exporter
     state: restarted
+  when: service_mgr

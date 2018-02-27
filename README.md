@@ -14,7 +14,7 @@ All needed packages will be installed with this role.
 | prometheus_node_exporter_release_name       | string |                                                                                    | node_exporter-{{ prometheus_node_exporter_version }}.linux-amd64                                                            | Name of the binary that will be downloaed from the   [release](https://github.com/prometheus/node_exporter/releases)  page |
 | prometheus_node_exporter_enabled_collectors | list   | [List of flags](https://github.com/prometheus/node_exporter)                       | conntrack, diskstats, entropy, filefd, filesystem, loadavg,   mdadm, meminfo, netdev, netstat, stat, textfile, time, vmstat | List of enabled collector                                                                                                  |
 | prometheus_node_exporter_config_flags       | dict   |                                                                                    |                                                                                                                             | Dict of key, value options to add to the start command line                                                                |
-
+| service_mgr       | string   |   upstart, systemd, false                                                                                 |       autodetect: ansible_service_mgr                                                                                                                      | Use this to override the service_mgr, e.g. to set it to systemd or to 'false' if you do not want to enable the service at all                                                               |
 
 ## Dependencies
 

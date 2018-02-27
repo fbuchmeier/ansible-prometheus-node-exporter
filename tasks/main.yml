@@ -77,3 +77,4 @@
     name: prometheus-node-exporter
     state: started
     enabled: yes
+  when: service_mgr
