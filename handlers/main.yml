@@ -12,3 +12,4 @@
   service:
     name: prometheus-node-exporter
     state: restarted
+  when: service_mgr != 'none'
